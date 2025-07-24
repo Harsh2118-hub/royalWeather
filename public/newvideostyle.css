@@ -1,0 +1,52 @@
+.new-video-form{
+    border: 0px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    margin: 12px auto;
+    border-radius: 20px;
+    margin-top: 10vh;
+    background-color: #232634;
+    box-shadow: rgb(146, 157, 206) 2px 2px 12px;
+    padding: 30px 20px;
+}
+.title  ,.description, .video-link{
+    font-size: 30px;
+    margin:  35px auto;
+    color: white;
+    
+}
+
+.title input ,.description input, .video-link input{
+    width: 250px;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 5px;
+    text-align: center;
+    border: 0px solid white;
+    background-color: #c0deff;
+}
+.new-video-form button{
+    width: 100%;
+    font-size: 23px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    border: 0px solid white;
+    margin: 15px auto;
+    background-color: rgb(61, 61, 107);
+    color: white;
+    border: 2px solid rgb(36, 36, 68)
+}
+
+.new-video-form button:hover{
+    border: 2px solid rgb(0, 166, 255);
+    color:rgb(0, 183, 255) ;
+}
+
+body{ 
+    background-color:#191b24;
+
+}

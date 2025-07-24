@@ -1,0 +1,78 @@
+<% layout("/layouts/boilerplate")%>
+
+    <body>
+        <!-- ----------fileter button--------- -->
+
+        <div class="filters-row">
+            <div class="filters">
+                <div class="filter-name">Countries</div>
+                <div class="filter-selection">
+                    <select>
+                        <option value="All Countries">All Countries</option>
+                        <option value="India">India</option>
+                        <option value="Japan">Japan</option>
+                        <option value="America">America</option>
+                        <option value="Dubai">Dubai</option>
+                        <option value="Russia">Russia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filters">
+                <div class="filter-name">Show Per Page</div>
+                <div class="filter-selection">
+                    <select>
+                        <option value="All Countries">10</option>
+                        <option value="India">10</option>
+                        <option value="Japan">20</option>
+                        <option value="America">30</option>
+                        <option value="Dubai">40</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filters">
+                <div class="filter-name">Quality</div>
+                <div class="filter-selection">
+                    <select>
+                        <option value="America">Auto</option>
+                        <option value="High">High</option>
+                        <option value="India">Medium</option>
+                        <option value="Japan">Low</option>
+                    </select>
+                </div>
+            </div>
+            <form method="get" action="http://localhost:8080/addvideo">
+                <div class="add-video"><button class="add-video-btn">Add video</button></div>
+            </form>
+        </div>
+
+        <Section>
+
+            <div class="section2">
+                <!-- <div class="section2-heading">Live Videos From World's Every Corner:</div> -->
+                <div class="video-container">
+                    <%for(let video of videos){%>
+                        <div class="video-container-card">
+                            <div class="video"><iframe width="445" height="253"
+                                    src="https://www.youtube.com/embed/<%=video.video_link%>"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe></div>
+                            <div class="video-city">
+                                <%=video.title %>
+                            </div>
+                            <div class="video-description">
+                                <%=video.description %>
+                            </div>
+                            <div class="delete-video-button">
+                                <form method="post" action="/videos/<%=video._id%>?_method=DELETE">
+                                    <button>Delete this video</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    <%}%>
+
+                </div>
+        </Section>
+
+    </body>

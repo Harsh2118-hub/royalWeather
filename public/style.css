@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header{
+    border: 0px solid darkred;
+    display: flex;
+    align-items: center;
+    background-color: #1e202b;
+    padding: 15px;
+}
+
+.header-left{
+    border: 0px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    width: 300px;
+}
+.logo{
+    border: 0px solid red;
+    width: 100px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+
+}
+.logo-name{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left:10px;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    text-shadow: rgb(32, 144, 249) 2px 2px 2px;
+
+}
+
+.header-center{
+    border: 0px solid rgb(40, 103, 119);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 100px;
+    width: 50%;
+}
+.nav-item{
+    font-size: 25px;
+    margin: 5px 10px;
+}
+.nav-item a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border: 2px solid #1e202b;
+    border-radius: 10px;
+    
+}
+.nav-item a:hover{
+    border: 2px solid rgb(74, 163, 246);
+    color: rgb(74, 163, 246);
+}
+
+/* ----------------------------------------------Section1------------------------------------------------ */
+
+.section1{
+    width: 100%;
+    border: 0px solid red;
+    background:linear-gradient(0deg, rgba(10, 15, 47, 0.758), rgba(17, 51, 77, 0.881)), url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120vh;;
+
+
+}
+
+.l1{
+    border: 0px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+
+}
+ .l1 input{
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    margin: 13vh 10px;
+    border-radius: 8px;
+    border: 0px solid rgb(0, 195, 255);
+    background-color: rgb(223, 255, 255);
+    color: blue;
+}
+.city-search-btn{ 
+    border : 0px solid red;
+    width: 20%;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    margin: 13vh 10px;
+    border-radius: 8px;
+    background-color:rgb(74, 163, 246);
+    color: white;
+    font-weight: bolder;
+}
+.city-search-btn:hover{
+    background-color:rgb(42, 121, 195);
+}
+.curr-weather-heading{
+    font-size: 50px;
+    color: yellow;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: rgb(148, 221, 157) 1px 2px 2px  ;
+}
+
+
+/* --------------weather display------------------ */
+
+.weather-display-main{
+    margin: 0% 5%;
+    border: 0px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10px;
+    background-color: rgba(22, 22, 22, 0.508);
+    border-radius: 20px;
+    box-shadow: rgba(77, 77, 77, 0.83) 2px 2px 10px;
+    
+}
+.weather-display-main1{
+    border: 0px solid yellow;
+    padding: 20px;
+    background-color: rgba(40, 42, 54, 0.624);
+}
+.city-name{
+    color: rgb(253, 213, 154);
+    font-size: 60px;
+    text-align: center;
+    margin: 10px 2px;
+}
+.weather-description{
+    font-size: 25px;
+    color: wheat;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.curr-weather-icon{
+    width: 200px;
+    border : 0px solid blanchedalmond;
+    margin: 12px auto;
+}
+.curr-weather-icon img{
+    width: 100%;
+    height: 100%;
+}
+.weather-display-main2{
+    border: 0px solid green;
+}
+/* -----main2------ */
+.weather-display-main2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cur-temp{
+    font-size: 50px;
+    color: white;
+    margin: 3px 2px;
+
+}
+.cur-real-feel{
+    font-size: 20px;
+    color: white;
+    margin: 3px 2px;
+    
+}
+.temp-range{
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    margin: 3px 2px;
+}
+.cur-temp-min ,.cur-temp-max{
+    margin: 10px;
+    font-size: 25px;
+    margin: 3px 10px;
+}
+.wind-speed-humidity{
+    font-size: 25px;
+    color: aliceblue;
+    display: flex;
+    margin: 5px 2px;
+    align-items: center;
+    justify-content: center;
+}
+.wind-speed-icon ,.humidity-icon{
+    margin: 5px 2px;
+    width: 35px;
+    margin-left: 20px;
+}
+.wind-speed-icon img,.humidity-icon img {
+    width: 100%;
+    height: 100%;
+}
+.curr-pressure,.curr-visiblity{
+    margin: 5px 2px;
+    font-size: 25px;
+    color: white;
+}
+.sunrise-sunset{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    margin: 5px 2px;
+}
+.sunrise,.sunset{
+    margin: 5px 2px;
+    margin-left: 20px;
+}
+.section2{
+    background-color: #1e202b;
+}
+.section2-heading{
+    font-size: 50px;
+    color: white;
+    padding: 40px 50px;
+
+}
+.video-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.video-container-card{
+    width: 450px;
+    height: 370px;
+    margin:35px 20px;
+    border: 0px solid white;
+    border-bottom: 2px solid rgb(155, 207, 255);
+    border-radius: 8px;
+}
+.video-city{
+    font-size: 25px;
+    color: white;
+    margin: 10px 0px;
+}
+.video-description{
+    font-size: 19px;
+    color: white;
+}

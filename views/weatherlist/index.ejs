@@ -1,0 +1,100 @@
+<% layout("/layouts/boilerplate")%>
+
+<body>
+<!-- ---------------------------------Section1------------------------------------->
+<section>
+    <div class="section1">
+        <form method="post" action="/city" >
+            <div class="l1">
+                <input type="text" name="city" placeholder="Search Your city">
+                <button class="city-search-btn">Search</button>
+            </div>
+        </form>
+        <div class="curr-weather-heading">Current Weather</div>
+        <!-- ----weather display------ -->
+        <div class="weather-display-main">
+            <div class="weather-display-main1">
+                <div class="city-name"><%=curweather.name%></div>
+                <div class="weather-description"><%=curweather.weather[0].description%></div>
+                <div class="curr-weather-icon"><img src="logo.png" alt=""></div>
+            </div>
+            <div class="weather-display-main2">
+                <div class="cur-temp"><%=curweather.main.temp%>&deg;K</div>
+                <div class="cur-real-feel">Real Feel : <%=curweather.main.feels_like%>&deg;K</div>
+                <div class="temp-range">
+                    <div class="cur-temp-min">Temp Min : <%=curweather.main.temp_min%> &deg;K</div>
+                    <div class="cur-temp-max">Temp Max : <%=curweather.main.temp_max%> &deg;K</div>
+                </div>
+                <div class="wind-speed-humidity">
+                    <div class="wind-speed-icon"><img src="wind-speed-icon (2).png" alt=""></div>
+                    <div class="wind-speed-value">Wind Speed :<%=curweather.wind.speed %>km/hr</div>
+                    <div class="humidity-icon"><img src="humidity-icon (2).png" alt=""></div>
+                    <div class="humdity-value">Humidity : <%=curweather.main.humidity%>%</div>
+                </div>
+                <div class="curr-pressure">Pressure : <%=curweather.main.pressure%> bar</div>
+                <div class="curr-visiblity">Visiblity : <%=curweather.visibility/1000%>&nbsp;Km.</div>
+                <div class="sunrise-sunset">
+                    <div class="sunrise">Sunrise :- <%=curweather.sys.sunrise%>&nbsp;AM</div>
+                    <div class="sunrise">Sunset :- <%=curweather.sys.sunset%>&nbsp;PM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- -------------Section2-----weeekly weather display------------- -->
+
+<Section>
+    <div class="section2">
+        <div class="section2-heading">Live Videos From World's Every Corner:</div>
+        <div class="video-container">
+            <div class="video-container-card">
+                <div class="video"><iframe width="445" height="253" src="https://www.youtube.com/embed/h-mRJ7XwOKQ?si=Efg-hKJKR8kCEM8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="video-city">Amazon Forerst</div>
+                <div class="video-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+
+            </div>
+            <div class="video-container-card">
+                <div class="video"><iframe width="445" height="253" src="https://www.youtube.com/embed/BJ3Yv572V1A?si=1GJoe1T2CxGyPJ_j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="video-city">Amazon Forerst</div>
+                <div class="video-description">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+
+            </div>
+            <div class="video-container-card">
+                <div class="video"><iframe width="445" height="253" src="https://www.youtube.com/embed/3szkFHfr6sA?si=j3lpMXq1DLvuMY61" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="video-city">Pandas's</div>
+                <div class="video-description">Lorem ipsum dolor sit amet.</div>
+
+            </div>
+
+            <div class="video-container-card">
+                <div class="video"><iframe width="445" height="253" src="https://www.youtube.com/embed/798qd_SQU3I?si=qW0BqGBEE1Wjd04e&amp;controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="video-city">Amazon Waterfall</div>
+                <div class="video-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dolor vitae autem.</div>
+
+            </div>
+            <div class="video-container-card">
+                <div class="video"><iframe width="445" height="253" src="https://www.youtube.com/embed/CUSxJKNP2e0?si=gMIMHuYT30Cb0wBW&amp;controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="video-city">Dubai</div>
+                <div class="video-description">Lorem ipsum dolor sit amet.</div>
+
+            </div>
+        
+            <%for(let video of all_videos){%>
+                <div class="video-container">
+                    <div class="video-container-card">
+                        <div class="video"><iframe width="445" height="253" src="https://www.youtube.com/embed/<%=video.video_link%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <div class="video-city"><%=video.title %></div>
+                        <div class="video-description"><%=video.description %></div>
+                
+                    </div>
+                   
+                </div>
+                <%}%>
+        </div>
+        
+    </div>
+</Section>
+
+
+</body>
